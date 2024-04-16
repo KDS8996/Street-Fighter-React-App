@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import FighterForm from './FighterForm';
 
+
 const FighterList = () => {
   const [fighters, setFighters] = useState([]);
   const [loading, setLoading] = useState(true);
