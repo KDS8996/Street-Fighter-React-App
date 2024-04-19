@@ -1,10 +1,8 @@
 import React from 'react';
-import { auth } from './firebase';
+import { useAuth } from '../hooks/useAuth'; // Assuming the path to useAuth is correct
 
 const Logout = () => {
-  const signOut = () => {
-    auth.signOut();
-  };
+  const { signOut } = useAuth(); // Destructure signOut from useAuth hook
 
   return (
     <div>

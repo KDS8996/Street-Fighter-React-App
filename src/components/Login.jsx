@@ -1,11 +1,8 @@
 import React from 'react';
-import { auth } from './firebase';
+import { useAuth } from '../hooks/useAuth'; // Assuming the path to useAuth is correct
 
 const Login = () => {
-  const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
-  };
+  const { signInWithGoogle } = useAuth(); // Destructure signInWithGoogle from useAuth hook
 
   return (
     <div>

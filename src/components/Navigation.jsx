@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth'; // Assuming you have a custom hook for authentication
+import { useAuth } from '../hooks/useAuth'; // src/hooks/useAuth 
 
 const Navigation = () => {
   const { user, logout } = useAuth(); // Custom hook to manage authentication state
