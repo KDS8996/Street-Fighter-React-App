@@ -1,13 +1,24 @@
+// src/components/Logout.jsx
 import React from 'react';
-import { useAuth } from '../hooks/useAuth'; // Assuming the path to useAuth is correct
+import { useAuth } from '../hooks/useAuth';
+import { auth } from '../firebase'; // Import the auth service directly
 
 const Logout = () => {
-  const { signOut } = useAuth(); // Destructure signOut from useAuth hook
+  const { signOut } = useAuth();
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+      // Additional logic after successful sign-out
+    } catch (error) {
+      console.error('Sign-out failed:', error.message);
+    }
+  };
 
   return (
     <div>
       <h2>Logout</h2>
-      <button onClick={signOut}>Sign out</button>
+      <button onClick={handleSignOut}>Sign out</button>
     </div>
   );
 };

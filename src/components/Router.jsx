@@ -5,6 +5,7 @@ import FighterList from './FighterList';
 import FighterDetails from './FighterDetails';
 import FighterForm from './FighterForm';
 import Login from './Login';
+import Logout from './Logout';
 
 const AppRouter = () => {
   return (
@@ -14,7 +15,7 @@ const AppRouter = () => {
       <Route path="/fighters/:id" element={<FighterDetails />} />
       <Route path="/add-fighter" element={<FighterForm />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/login" element={<Logout />} />
+      <Route path="/logout" element={<Logout />} /> {/* Updated to use the Logout component */}
     </Routes>
   );
 };
